@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREN Digital Studio | Sites Que Impulsionam Grandes Negócios</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Montserrat (Títulos/Destaques) & Inter (Textos/Apoio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#080808',
+                            900: '#0B0B0B', // Primary Dark
+                            800: '#1F1F1F', // Secondary Dark / Card BG
+                            700: '#2A2A2A',
+                        },
+                        gold: {
+                            300: '#E6C697',
+                            500: '#D4AF7A', // Primary Gold Accent
+                            600: '#B8925D',
+                        },
+                        offwhite: '#E8E6E1', // Off-White Text/Light Base
+                        whatsapp: '#25D366',
+                        whatsappHover: '#20ba5a',
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        montserrat: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0B0B;
+            color: #E8E6E1;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-title {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .glass-card {
+            background: rgba(31, 31, 31, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 122, 0.15);
+        }
+        .preview-iframe-container {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .preview-iframe {
+            width: 133.33%;
+            height: 133.33%;
+            transform: scale(0.75);
+            transform-origin: 0 0;
+            border: 0;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #E8E6E1 0%, #D4AF7A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-offwhite selection:bg-gold-500 selection:text-dark-900">
+
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-card border-b border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-gold-500 transition-transform group-hover:scale-105">
+                    <path d="M50 15 L85 85 L65 85 L50 50 L35 85 L15 85 Z" fill="currentColor"/>
+                </svg>
+                <div class="flex flex-col">
+                    <span class="font-title text-xl font-bold tracking-widest text-offwhite uppercase">AUREN</span>
+                    <span class="font-title text-[9px] tracking-[0.25em] text-gold-500 uppercase -mt-1 font-semibold">Digital Studio</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider">
+                <a href="#sobre" class="text-offwhite/80 hover:text-gold-500 transition-colors">Sobre Nós</a>
+                <a href="#portfolio" class="text-offwhite/80 hover:text-gold-500 transition-colors">Projetos</a>
+                <a href="#diferenciais" class="text-offwhite/80 hover:text-gold-500 transition-colors">Diferenciais</a>
+                <a href="https://api.whatsapp.com/send?phone=5598985159735&text=Quero+um+site+profissional+que+passe+total+confian%C3%A7a" target="_blank" class="bg-gold-500 text-dark-900 px-6 py-2.5 rounded-full hover:bg-gold-300 transition-all shadow-md font-bold tracking-wider">Solicitar Orçamento</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gold-500 text-2xl focus:outline-none" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-dark-900 border-b border-gold-500/20 space-y-4">
+            <a href="#sobre" class="block text-offwhite hover:text-gold-500 py-1">Sobre Nós</a>
+            <a href="#portfolio" class="block text-offwhite hover:text-gold-500 py-1">Projetos</a>
+            <a href="#diferenciais" class="block text-offwhite hover:text-gold-500 py-1">Diferenciais</a>
+            <a href="https://api.whatsapp.com/send?phone=5598985159735&text=Quero+um+site+profissional+que+passe+total+confian%C3%A7a" target="_blank" class="block bg-gold-500 text-dark-900 text-center py-2.5 rounded-full font-bold uppercase tracking-wider">Solicitar Orçamento</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="pt-36 pb-20 md:pt-48 md:pb-32 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-800 border border-gold-500/30 text-gold-500 text-xs font-semibold tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                    Design, Tecnologia & Estratégia
+                </div>
+                
+                <h1 class="font-title text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-offwhite leading-tight">
+                    Sites que impulsionam <span class="gold-gradient-text block">grandes negócios</span>
+                </h1>
+
+                <p class="text-offwhite/70 text-base sm:text-lg font-light leading-relaxed max-w-2xl">
+                    Design, tecnologia e estratégia para posicionar sua marca no digital. Construímos presença digital de alto valor para empresas e profissionais de excelência.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                    <a href="https://api.whatsapp.com/send?phone=5598985159735&text=Quero+um+site+profissional+que+passe+total+confian%C3%A7a" target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-7 py-3.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#20ba5a] transition-all shadow-lg hover:shadow-[#25D366]/20 hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Falar no WhatsApp</span>
+                    </a>
+                    <a href="#portfolio" class="inline-flex items-center justify-center gap-2 bg-dark-800 border border-gold-500/30 text-offwhite px-7 py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:border-gold-500 transition-all">
+                        <span>Ver Nossos Trabalhos</span>
+                        <i class="fa-solid fa-arrow-down text-xs text-gold-500"></i>
+                    </a>
+                </div>
+
+                <!-- Proof points -->
+                <div class="pt-8 border-t border-gold-500/15 grid grid-cols-3 gap-4 text-center sm:text-left">
+                    <div>
+                        <p class="font-title text-2xl sm:text-3xl font-bold text-gold-500">100%</p>
+                        <p class="text-[11px] text-offwhite/60 uppercase tracking-widest mt-1">Exclusividade</p>
+                    </div>
+                    <div>
+                        <p class="font-title text-2xl sm:text-3xl font-bold text-gold-500">Alta</p>
+                        <p class="text-[11px] text-offwhite/60 uppercase tracking-widest mt-1">Performance</p>
+                    </div>
+                    <div>
+                        <p class="font-title text-2xl sm:text-3xl font-bold text-gold-500">Estratégia</p>
+                        <p class="text-[11px] text-offwhite/60 uppercase tracking-widest mt-1">De Conversão</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5">
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <div class="absolute -inset-4 bg-gold-500/10 rounded-3xl blur-2xl -z-10"></div>
+                    <div class="bg-dark-800 border border-gold-500/30 rounded-2xl p-6 shadow-2xl space-y-6">
+                        <div class="flex items-center justify-between border-b border-gold-500/10 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gold-500 text-dark-900 flex items-center justify-center font-title font-bold text-sm">A</div>
+                                <div>
+                                    <h2 class="font-title font-bold text-sm text-offwhite uppercase tracking-wider">AUREN Digital Studio</h2>
+                                    <p class="text-xs text-gold-500">Atendimento Exclusivo</p>
+                                </div>
+                            </div>
+                            <span class="text-[10px] uppercase font-bold tracking-wider bg-gold-500/10 text-gold-500 border border-gold-500/20 px-2.5 py-1 rounded-full">Online</span>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-dark-900 p-3.5 rounded-2xl rounded-tl-none border border-gold-500/15 text-offwhite/90">
+                                💬 "Seu site é a primeira impressão da sua empresa. Ele transmite autoridade ou faz você perder clientes para a concorrência?"
+                            </div>
+                            <div class="bg-gold-500 text-dark-900 font-medium p-3.5 rounded-2xl rounded-tr-none ml-auto max-w-[85%] shadow-sm">
+                                "Quero um site profissional que passe total confiança e gere novos agendamentos!"
+                            </div>
+                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=5598985159735&text=Quero+um+site+profissional+que+passe+total+confian%C3%A7a" target="_blank" class="flex items-center justify-center gap-3 w-full bg-[#25D366] text-white font-bold uppercase tracking-wider text-xs py-3.5 rounded-xl hover:bg-[#20ba5a] transition shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Falar no WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-dark-950 border-y border-gold-500/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+                <span class="text-gold-500 font-title text-xs font-bold uppercase tracking-widest block">Nosso Portfólio</span>
+                <h2 class="font-title text-3xl sm:text-4xl font-extrabold uppercase text-offwhite">
+                    Projetos de Alto Impacto
+                </h2>
+                <div class="w-12 h-0.5 bg-gold-500 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Grid de Projetos -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- PROJETO 1 - DR. MÁRCIO ONIDA -->
+                <div class="bg-dark-800 border border-gold-500/20 rounded-2xl overflow-hidden shadow-2xl hover:border-gold-500/40 transition-all duration-300 flex flex-col group">
+                    <!-- Top Browser Bar Mockup -->
+                    <div class="bg-dark-950 text-offwhite/60 px-4 py-3 flex items-center justify-between text-xs border-b border-dark-700">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        </div>
+                        <div class="bg-dark-900 text-gold-500 px-3 py-1 rounded-md text-[11px] truncate max-w-[220px] font-mono border border-gold-500/10">
+                            drmarcioonida.vercel.app
+                        </div>
+                        <a href="https://drmarcioonida.vercel.app/" target="_blank" class="text-offwhite/60 hover:text-gold-500 transition" title="Abrir em nova aba">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Live Preview Container -->
+                    <div class="relative bg-dark-900 overflow-hidden">
+                        <div class="preview-iframe-container hidden sm:block">
+                            <iframe src="https://drmarcioonida.vercel.app/" class="preview-iframe" title="Preview Dr. Márcio Onida" loading="lazy"></iframe>
+                        </div>
+
+                        <div class="block sm:hidden p-6 text-center bg-dark-900 text-offwhite py-16">
+                            <i class="fa-solid fa-user-doctor text-4xl text-gold-500 mb-3"></i>
+                            <h3 class="font-title text-2xl font-bold uppercase">Dr. Márcio Onida</h3>
+                            <p class="text-xs text-offwhite/60 mt-2">Plataforma Médica & Agendamento</p>
+                        </div>
+
+                        <div class="absolute inset-0 bg-dark-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <a href="https://drmarcioonida.vercel.app/" target="_blank" class="bg-gold-500 text-dark-900 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold-300 shadow-lg transition transform group-hover:scale-105">
+                                Ver Site Ao Vivo <i class="fa-solid fa-external-link text-xs ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">Saúde & Medicina</span>
+                                <span class="text-xs text-offwhite/50 font-medium"><i class="fa-regular fa-circle-check text-gold-500 mr-1"></i> Concluído</span>
+                            </div>
+                            <h3 class="font-title text-2xl font-bold text-offwhite mb-2">Dr. Márcio Onida — Landing Page Médica</h3>
+                            <p class="text-offwhite/70 text-sm leading-relaxed">
+                                Website de alta conversão desenvolvido para posicionamento de autoridade médica, agendamento simplificado de consultas e apresentação limpa e humana de serviços de saúde.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 pt-4 border-t border-gold-500/10">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-dark-900 text-offwhite/80 px-2.5 py-1 rounded-md font-medium border border-dark-700">Design Premium</span>
+                                <span class="text-xs bg-dark-900 text-offwhite/80 px-2.5 py-1 rounded-md font-medium border border-dark-700">100% Responsivo</span>
+                                <span class="text-xs bg-dark-900 text-offwhite/80 px-2.5 py-1 rounded-md font-medium border border-dark-700">Integração WhatsApp</span>
+                            </div>
+
+                            <a href="https://drmarcioonida.vercel.app/" target="_blank" class="inline-flex items-center gap-2 text-gold-500 hover:text-gold-300 font-semibold text-xs uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                                Visitar https://drmarcioonida.vercel.app/
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJETO 2 - ANA ARAÚJO ARQUITETA -->
+                <div class="bg-dark-800 border border-gold-500/20 rounded-2xl overflow-hidden shadow-2xl hover:border-gold-500/40 transition-all duration-300 flex flex-col group">
+                    <!-- Top Browser Bar Mockup -->
+                    <div class="bg-dark-950 text-offwhite/60 px-4 py-3 flex items-center justify-between text-xs border-b border-dark-700">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        </div>
+                        <div class="bg-dark-900 text-gold-500 px-3 py-1 rounded-md text-[11px] truncate max-w-[240px] font-mono border border-gold-500/10">
+                            siteanaaraujoarquiteta.vercel.app
+                        </div>
+                        <a href="https://siteanaaraujoarquiteta.vercel.app/" target="_blank" class="text-offwhite/60 hover:text-gold-500 transition" title="Abrir em nova aba">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Live Preview Container -->
+                    <div class="relative bg-dark-900 overflow-hidden">
+                        <div class="preview-iframe-container hidden sm:block">
+                            <iframe src="https://siteanaaraujoarquiteta.vercel.app/" class="preview-iframe" title="Preview Ana Araújo Arquiteta" loading="lazy"></iframe>
+                        </div>
+
+                        <div class="block sm:hidden p-6 text-center bg-dark-900 text-offwhite py-16">
+                            <i class="fa-solid fa-compass-drafting text-4xl text-gold-500 mb-3"></i>
+                            <h3 class="font-title text-2xl font-bold uppercase">Ana Araújo Arquiteta</h3>
+                            <p class="text-xs text-offwhite/60 mt-2">Arquitetura & Design de Interiores</p>
+                        </div>
+
+                        <div class="absolute inset-0 bg-dark-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <a href="https://siteanaaraujoarquiteta.vercel.app/" target="_blank" class="bg-gold-500 text-dark-900 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-gold-300 shadow-lg transition transform group-hover:scale-105">
+                                Ver Site Ao Vivo <i class="fa-solid fa-external-link text-xs ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">Arquitetura & Design</span>
+                                <span class="text-xs text-offwhite/50 font-medium"><i class="fa-regular fa-circle-check text-gold-500 mr-1"></i> Concluído</span>
+                            </div>
+                            <h3 class="font-title text-2xl font-bold text-offwhite mb-2">Ana Araújo — Arquitetura e Interiores</h3>
+                            <p class="text-offwhite/70 text-sm leading-relaxed">
+                                Portfólio de arquitetura minimalista e elegante, desenvolvido para destacar projetos autorais, transmitir sofisticação e captar novos clientes exigentes.
+                            </p>
+                        </div>
+
+                        <div class="space-y-4 pt-4 border-t border-gold-500/10">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-dark-900 text-offwhite/80 px-2.5 py-1 rounded-md font-medium border border-dark-700">Estética Minimalista</span>
+                                <span class="text-xs bg-dark-900 text-offwhite/80 px-2.5 py-1 rounded-md font-medium border border-dark-700">Galeria de Projetos</span>
+                                <span class="text-xs bg-dark-900 text-offwhite/80 px-2.5 py-1 rounded-md font-medium border border-dark-700">Layout Fluido</span>
+                            </div>
+
+                            <a href="https://siteanaaraujoarquiteta.vercel.app/" target="_blank" class="inline-flex items-center gap-2 text-gold-500 hover:text-gold-300 font-semibold text-xs uppercase tracking-wider group-hover:translate-x-1 transition-transform">
+                                Visitar https://siteanaaraujoarquiteta.vercel.app/
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciais" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-gold-500 font-title text-xs font-bold uppercase tracking-widest block">Elementos da Marca</span>
+                <h2 class="font-title text-3xl sm:text-4xl font-extrabold uppercase text-offwhite leading-tight">
+                    Mais que sites, construímos presença digital
+                </h2>
+                <p class="text-offwhite/70 text-base leading-relaxed">
+                    Quando um potencial cliente entra no seu site e encontra um visual ultrapassado ou amador, ele escolhe o seu concorrente.
+                </p>
+                <p class="text-offwhite/70 text-base leading-relaxed">
+                    Na <strong>AUREN Digital Studio</strong>, unimos modernidade, exclusividade e estratégia de conversão para posicionar sua marca com prestígio no mercado.
+                </p>
+            </div>
+
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-gold-500/15 shadow-sm hover:border-gold-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-dark-900 border border-gold-500/30 text-gold-500 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-cube"></i>
+                    </div>
+                    <h3 class="font-title text-lg font-bold uppercase text-offwhite mb-2">Modernidade</h3>
+                    <p class="text-offwhite/60 text-sm leading-relaxed">
+                        Design contemporâneo alinhado às maiores tendências globais de UI e UX do mercado digital.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-gold-500/15 shadow-sm hover:border-gold-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-dark-900 border border-gold-500/30 text-gold-500 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-title text-lg font-bold uppercase text-offwhite mb-2">Exclusividade</h3>
+                    <p class="text-offwhite/60 text-sm leading-relaxed">
+                        Projetos totalmente personalizados para a identidade e posicionamento do seu negócio.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-gold-500/15 shadow-sm hover:border-gold-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-dark-900 border border-gold-500/30 text-gold-500 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="font-title text-lg font-bold uppercase text-offwhite mb-2">Estratégia</h3>
+                    <p class="text-offwhite/60 text-sm leading-relaxed">
+                        Estrutura planejada para guiar o visitante diretamente ao seu canal de vendas ou agendamento.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-gold-500/15 shadow-sm hover:border-gold-500/40 transition">
+                    <div class="w-12 h-12 rounded-xl bg-dark-900 border border-gold-500/30 text-gold-500 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-title text-lg font-bold uppercase text-offwhite mb-2">Confiança</h3>
+                    <p class="text-offwhite/60 text-sm leading-relaxed">
+                        Padrões elevados de segurança, velocidade de carregamento e estabilidade técnica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 bg-dark-950 text-offwhite relative overflow-hidden border-t border-gold-500/10">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-dark-800 border border-gold-500/30 rounded-3xl p-8 sm:p-14 text-center shadow-2xl space-y-8">
+                <div class="space-y-4">
+                    <span class="text-gold-500 font-title text-xs font-bold uppercase tracking-widest block">Pronto para transformar seu negócio?</span>
+                    <h2 class="font-title text-3xl sm:text-5xl font-extrabold uppercase text-offwhite">
+                        Vamos construir seu novo site?
+                    </h2>
+                    <p class="text-offwhite/70 text-base sm:text-lg font-light max-w-xl mx-auto">
+                        Entre em contato hoje e descubra como a <strong>AUREN Digital Studio</strong> pode elevar o patamar do seu projeto.
+                    </p>
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="https://api.whatsapp.com/send?phone=5598985159735&text=Quero+um+site+profissional+que+passe+total+confian%C3%A7a" target="_blank" class="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-[#20ba5a] transition shadow-xl hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Falar no WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-950 text-offwhite/40 py-8 border-t border-dark-700 text-xs font-sans">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <span class="font-title font-bold text-sm tracking-widest text-offwhite">AUREN DIGITAL STUDIO</span>
+                <span class="hidden sm:inline">— Websites & Experiências Digitais</span>
+            </div>
+            <p>© <span id="year"></span> AUREN Digital Studio. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
